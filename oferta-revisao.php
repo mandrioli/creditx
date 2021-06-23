@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,19 +34,19 @@
                 <div class="card">
                     <div class="card-body">
                         <span class="text-muted">Total do empréstimo</span>
-                        <p class="card-text"><strong>R$ 2.000,00</strong></p>
+                        <p class="card-text"><strong>R$ <?=$_SESSION['valorEmprestimo']?></strong></p>
 
                         <span class="text-muted">Total de parcelas</span>
-                        <p class="card-text"><strong>12</strong></p>
+                        <p class="card-text"><strong><?=$_SESSION['prazo']?></strong></p>
 
                         <span class="text-muted">Valor das parcelas</span>
-                        <p class="card-text"><strong>R$ 201,28</strong></p>
+                        <p class="card-text"><strong>R$ <?=$_SESSION['valorParcela']?></strong></p>
 
                         <span class="text-muted">Total a pagar</span>
-                        <p class="card-text"><strong>R$ 2.415,36</strong></p>
+                        <p class="card-text"><strong>R$ <?=$_SESSION['valorTotal']?></strong></p>
 
                         <span class="text-muted">CET</span>
-                        <p class="card-text"><strong>Taxa média 3,02% (ao mês) e 43,69% (ao ano)</strong></p>
+                        <p class="card-text"><strong>Taxa média <?=$_SESSION['taxaCET']?>% (ao mês) e 43,69% (ao ano)</strong></p>
 
                         <span class="text-muted">Juros</span>
                         <p class="card-text"><strong>Taxa média 2,68% (ao mês) e 37,35% (ao ano)</strong></p>
